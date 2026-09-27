@@ -43,3 +43,19 @@ cursor: pointer;
 }
 .message { margin-top: 14px; font-weight: 600; }
 footer { text-align: center; padding: 25px; color: #666; }
+.pay-btn
+display: block;
+width: 100%:
+margin-top: 12px;
+padding: 14px;
+text-align: center;
+text decoration: none;
+color: #ff7a00;
+font-weight: bold;
+box-shadow: 0 5px 15 px rgba(0, 200, 83, 0.25);
+transition: 0.2 s;
+}
+.pay-btn:hover {
+  background: #ff9d00;
+  transform: translateY(-1px;
+}
