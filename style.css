@@ -55,7 +55,7 @@ font-weight: bold;
 box-shadow: 0 5px 15 px rgba(0, 200, 83, 0.25);
 transition: 0.2 s;
 }
-.pay-btn:hover {
+.pay-btn: {
   background: #ff9d00;
   transform: translateY(-1px;
 }
