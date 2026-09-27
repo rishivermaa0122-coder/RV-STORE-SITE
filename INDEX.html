@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>RV Store</title>  
+  <link rel="stylesheet" href="style.css">  
+</head>  
+<body>  
+  <header class="hero">  
+    <h1>RV Store</h1>  
+    <p>Simple and easy online ordering</p>  
+  </header>    <main class="container">  
+    <section class="notice">  
+      <strong>Delivery Area</strong>  
+      <p>Orders are delivered only in Palamu / Daltonganj.</p>  
+      <p>Eligible PIN codes: 822101, 822102, 822110</p>  
+    </section>  <section class="card">  
+  <h2>Place Your Order</h2>  
+  <form id="orderForm">  
+    <label>Customer Name  
+      <input id="name" required>  
+    </label>  
+    <label>Mobile Number  
+      <input id="mobile" type="tel" required>  
+    </label>  
+    <label>Address  
+      <textarea id="address" rows="3" required></textarea>  
+    </label>  
+    <label>PIN Code  
+      <input id="pin" inputmode="numeric" maxlength="6" required>  
+    </label>  
+    <label>Product / Order Details  
+      <textarea id="order" rows="4" placeholder="Product name, quantity, etc." required></textarea>  
+    </label>  
+    <button type="submit">Submit Order</button>  
+  </form>  
+  <p id="message" class="message"></p>  
+</section>
+
+  </main>    <footer>© 2026 RV Store</footer>    <script>  
+    document.getElementById("orderForm").addEventListener("submit", function(e) {  
+      e.preventDefault();  
+      const allowed = ["822101", "822102", "822110"];  
+      const pin = document.getElementById("pin").value.trim();  
+  
+      if (!allowed.includes(pin)) {  
+        document.getElementById("message").textContent =  
+          "Sorry, delivery is currently available only in Palamu / Daltonganj for the listed PIN codes.";  
+        return;  
+      }  
+  
+      document.getElementById("message").textContent =  
+        "Order details entered successfully. Payment can be connected after your Cashfree payment link is ready.";  
+    });  
+  </script>  </body>  
+</html>
